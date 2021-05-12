@@ -4,8 +4,6 @@ categories:
 - til
 ---
 
-# Find out what's the IO utilization
-
 ```sh
 iostat -xyz 1 100
 ```

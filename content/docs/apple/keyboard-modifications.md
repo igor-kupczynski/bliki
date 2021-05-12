@@ -5,9 +5,7 @@ tags:
 - macos
 ---
 
-# Keyboard modifications
-
-## Why?
+# Why?
 
 * `CapsLock` is never used and `Esc` is hard to reach, but useful. 
     * The typical _back to normal mode_ in vim, but also as meta `Esc  f` `Esc  b` is next/previous word. 
@@ -16,7 +14,7 @@ tags:
     * On macOS there's karabinier elements, which is amazing. But in my tests I had trouble with karabinier + touchbar customizations. 
 
 
-## How?
+# How?
 
 * MacOS
     * **Settings** then **Keyboard** then **Modifier Keys** then you can map `CapsLock` to your linking.
@@ -24,7 +22,7 @@ tags:
     * Use gnome tweaks to map `CapsLock` to `Esc`.
 
 
-## Resources
+# Resources
 
 * Space Cadet -- an article on the joy of improving your keyboard workflow [https://stevelosh.com/blog/2012/10/a-modern-space-cadet/#control-escape](https://stevelosh.com/blog/2012/10/a-modern-space-cadet/#control-escape)
 * Various keyboard improvements with hammerspoon -- [https://github.com/jasonrudolph/keyboard#features](https://github.com/jasonrudolph/keyboard#features)

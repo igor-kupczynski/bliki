@@ -2,17 +2,15 @@
 title: Transmission Control Protocol (TCP)
 ---
 
-# Transmission Control Protocol (TCP)
-
 TCP is a protocol which offers reliable communication channel over an unreliable network. It ensures that packets are delivered in-order, even over a congested network.
 
-## Operation
+# Operation
 * TCP connection starts with a three way handshake. The happy path is `client: syn`, `server: syn-ack`, `client: ack`. If the port is closed the server responds with `rst`, or if the port is filtered there's no response.
 * The connection ends with `fin`.
 * TCP operates on the transport layer and wraps the data written to it in segments. Then hands the segments to network layer.
 * TCP stores the data to send in __send buffer__ and to receive in __receive buffer__. When application is ready it will read from the receive buffer.
 
-## Features
+# Features
 * In-order delivery
 * Congestion control
     * slow start and congestion avoidance.
@@ -24,7 +22,7 @@ TCP is a protocol which offers reliable communication channel over an unreliable
 
 
 
-## References
+# References
 * Talk _Networking Best Practices_ by Joshua Graessley
     * [WWDC 2012 session 706](./https://www.youtube.com/watch?v=aRsPC2g77es)
 * Article on [TCP flow control](https://www.brianstorti.com/tcp-flow-control/)

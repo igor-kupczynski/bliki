@@ -2,9 +2,7 @@
 title: Create a gpg key and don't reenter its password on macos
 ---
 
-# Create a gpg key and don't reenter its password on macos
-
-## Macos prerequisites to avoid reentering password all the time
+# Macos prerequisites to avoid reentering password all the time
 
 * Install pinentry-mac (UI to enter passwords for gpg keys)
 
@@ -27,14 +25,14 @@ title: Create a gpg key and don't reenter its password on macos
         gpgconf --launch gpg-agent
 
 
-### If gpg gives you errors later on try starting a new shell and then
+## If gpg gives you errors later on try starting a new shell and then
 
         gpgconf --kill gpg-agent
         gpgconf --launch gpg-agent
         echo "foo" | gpg --clearsign
 
 
-## Generate key pair with multiple emails
+# Generate key pair with multiple emails
 
 * Generate key with the first email
 
@@ -66,7 +64,7 @@ title: Create a gpg key and don't reenter its password on macos
         gnupg> save
 
 
-## Keybase
+# Keybase
 * (optional) Store the key on Keybase  (alt: store it in a password manager?)
 
         keybase pgp list
@@ -80,6 +78,6 @@ title: Create a gpg key and don't reenter its password on macos
         keybase pgp pull-private <fingerprint>
 
 
-## Reference
+# Reference
 
 * https://withblue.ink/2020/05/17/how-and-why-to-sign-git-commits.html

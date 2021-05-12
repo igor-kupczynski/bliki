@@ -2,8 +2,6 @@
 title: Go memory ballast technique
 ---
 
-# Go memory ballast technique
-
 * In go, the GC will trigger every time the heap size doubles.
 * If you know your steady state heap size you can “pre-allocate” it by creating a “ballast”.
 ```go
@@ -21,5 +19,5 @@ func main() {
 * When the GC runs, the ballast will not be swept as garbage since we still hold a reference to it in our main function, and thus it is considered part of the live memory.
 * Memory in 'nix systems (and even Windows) is virtually addressed and mapped through page tables by the OS. When the above code runs, the array the ballast slice points to will be allocated in the program’s virtual address space. Only if we attempt to read or write to the slice, will the page fault occur that causes the physical RAM backing the virtual addresses to be allocated.
 
-## References
+# References
 * https://blog.twitch.tv/en/2019/04/10/go-memory-ballast-how-i-learnt-to-stop-worrying-and-love-the-heap-26c2462549a2/ 
