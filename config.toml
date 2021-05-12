@@ -1,4 +1,46 @@
-baseURL = "http://example.org/"
+baseURL = "/"
+
+title = "Igor's Bliki"
+theme = "docsy"
+
+
+enableGitInfo = true
+
+
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "xmin"
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+# Highlighting config
+pygmentsCodeFences = true
+pygmentsUseClasses = false
+
+pygmentsUseClassic = false
+pygmentsStyle = "tango"
+
+# Configure how URLs look like per section.
+[permalinks]
+blog = "/:section/:year/:month/:day/:slug/"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+      style = "tango"
+
+[outputs]
+section = ["HTML", "print"]
+
+[params]
+copyright = "Igor Kupczyński"
+
+github_repo = "https://github.com/igor-kupczynski/bliki"
+
+[params.ui]
+sidebar_menu_compact = false
+breadcrumb_disable = true
+sidebar_search_disable = true
+navbar_logo = false
+footer_about_disable = false
